@@ -1,0 +1,32 @@
+<h1>Hola Grupo de IRD</h1><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <table class="table table-striped" *ngIf="alumnos.length">
+        <thead>
+          <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Correo</th>
+            <th>Pago</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos">
+            <td>{{alumno.matriucula}}</td>
+            <td>{{alumno.nombre | uppercase}}</td>
+            <td>{{alumno.edad}}</td>
+            <td>{{alumno.correo}}</td>
+            <td>{{alumno.pago | currency}}</td>
+            <td><img src="{{alumno.foto}}" alt="" width="80px"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
