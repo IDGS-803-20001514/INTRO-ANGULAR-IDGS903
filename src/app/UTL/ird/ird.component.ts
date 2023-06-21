@@ -9,6 +9,15 @@ export class IrdComponent {
 
   // alumnos:any[] = []
 
+  imageWith:number = 50
+  imageMargin:number = 2;
+  muestraImg:boolean = true;
+  listaFilter:string = '';
+
+  showImagen():void{
+    this.muestraImg =! this.muestraImg;
+  }
+
   alumnos: any[] = [
     {
       "matriucula": 1234,
