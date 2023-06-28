@@ -28,7 +28,7 @@
     </div>
 
     <div class="table-responsive">
-      
+
 
       <table class="table table-striped" *ngIf="alumnos.length">
         <thead>
@@ -39,11 +39,11 @@
             <th>Edad</th>
             <th>Correo</th>
             <th>Pago</th>
-            <th>Foto</th>
+            <th>Calificacion</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let alumno of alumnos">
+          <tr *ngFor="let alumno of alumnos |alumnosFilter:listaFilter">
             <td><img *ngIf="muestraImg" [src]="alumno.foto" [title]="alumno.nombre" [style.width.px]="imageWith"
               [style.margin.px]="imageMargin"></td>
             <td>{{alumno.matriucula}}</td>
@@ -51,7 +51,7 @@
             <td>{{alumno.edad}}</td>
             <td>{{alumno.correo}}</td>
             <td>{{alumno.pago | currency}}</td>
-            <td></td>
+            <td>8</td>
           </tr>
         </tbody>
       </table>

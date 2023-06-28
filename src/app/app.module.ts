@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { SumaComponent } from './UTL/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasModule } from './UTL/formularios/operas/operas.module';
+import { MenuComponent } from './UTL/menu/menu.component';
+import { AlumnosFilterPipe } from './UTL/alumnos-filter.pipe';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { OperasModule } from './UTL/formularios/operas/operas.module';
     idgsComponent,
     ievnComponent,
     IrdComponent,
-    SumaComponent
+    SumaComponent,
+    MenuComponent,
+    AlumnosFilterPipe
   ],
   imports: [
     BrowserModule,
